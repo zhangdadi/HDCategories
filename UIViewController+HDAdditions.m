@@ -64,7 +64,11 @@
     itemButtom.titleLabel.font = [UIFont systemFontOfSize: 16];
     [itemButtom setTitle:title forState:UIControlStateNormal];
     [itemButtom setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
-    [itemButtom setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIColor *color = [UINavigationBar appearance].titleTextAttributes[UITextAttributeTextColor];
+    if (color == nil) {
+        color = [UIColor whiteColor];
+    }
+    [itemButtom setTitleColor:color forState:UIControlStateNormal];
     itemButtom.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [itemButtom addTarget:targe action:action
          forControlEvents:UIControlEventTouchUpInside];
