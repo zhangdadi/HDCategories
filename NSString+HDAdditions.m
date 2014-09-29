@@ -20,5 +20,19 @@
     return (width > 200 ? 200 : width);
 }
 
++ (NSString *)getTemporaryPath
+{
+    return NSTemporaryDirectory();
+}
+
++ (NSString *)getCachePath
+{
+    NSArray *CachePaths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString  *directory = [CachePaths objectAtIndex:0];
+    
+    return directory;
+}
+
+
 
 @end

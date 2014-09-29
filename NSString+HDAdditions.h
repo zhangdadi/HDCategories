@@ -12,4 +12,7 @@
 - (CGFloat)computTextHeightFont:(UIFont *)font width:(CGFloat)width;
 - (NSInteger)computTextWidthFont:(UIFont *)font;
 
++ (NSString *)getTemporaryPath;//获取临时目录
++ (NSString *)getCachePath;//获取缓存目录
+
 @end
