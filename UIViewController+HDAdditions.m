@@ -66,7 +66,7 @@
     [itemButtom setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
     UIColor *color = [UINavigationBar appearance].titleTextAttributes[UITextAttributeTextColor];
     if (color == nil) {
-        color = [UIColor whiteColor];
+        color = [UIColor blackColor];
     }
     [itemButtom setTitleColor:color forState:UIControlStateNormal];
     itemButtom.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
