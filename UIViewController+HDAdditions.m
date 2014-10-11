@@ -15,6 +15,9 @@
     return [self customBackButtonTitle:@"返回" target:targe action:action];
 }
 - (UIBarButtonItem *)customBackButtonTitle:(NSString *)title target:(id)targe action:(SEL)action {
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
     return [self customLeftButtonTitle:title imageName:@"backof" target:targe action:action];
 }
 
